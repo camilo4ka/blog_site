@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BlogSite</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+  </head>
+
+  <body>
+
+<nav class="navbar">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav">
+      
+      <!--li><a href="#">GO</a></li-->
+      <li> <%= link_to "GO", blog_go_url%> </li>
+
+      <!--li><a href="#">EAT</a></li--> 
+      <li> <%= link_to "EAT", blog_eat_url%> </li>
+      <!--li><a href="#">WEAR</a></li-->
+      <li> <%= link_to "WEAR", blog_wear_url%> </li> 
+      <!--li><a href="/profile_fab">PROFILE</a></li!-->
+          <li> <%= link_to "ME", profile_fab_url%> </li>
+
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+    <%= yield %>
+    </div>
+  </body>
+</html>
